@@ -7,5 +7,6 @@ rm -rf llm-d && git clone -b "${LLMD_VERSION}" --depth 1 https://github.com/llm-
 
 cd llm-d/docs/infra-providers/aks
 helmfile apply -f network-operator.helmfile.yaml
+kubectl apply -f nic-cluster-policy.yaml
 cd ../../../
 
